@@ -1,0 +1,113 @@
+<style>
+/* 1. SLIDER */
+.nick-hero-wrapper {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000; 
+    top: -4px;
+}
+.nick-hero-swiper {
+    width: 100%;
+    height: 80vh;
+    min-height: 450px;
+    position: relative;
+    visibility: hidden; 
+}
+.nick-hero-swiper.swiper-initialized {
+    visibility: visible;
+    animation: fadeInSlider 0.5s ease-in-out;
+}
+@keyframes fadeInSlider {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.nick-hero-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+.nick-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 10;
+
+    background: linear-gradient(to top,
+        rgba(0,0,0,0.9) 0%,
+        rgba(0,0,0,0.4) 30%,
+        transparent 70%
+    );
+}
+.nick-hero-group {
+    position: absolute;
+    bottom: 8%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    max-width: 80%;
+}
+.nick-hero-logo {
+    width: 22vw !important; 
+    min-width: 180px;
+    max-width: 400px !important;
+    height: auto !important;
+    margin-bottom: 10px !important;
+}
+
+.nick-hero-text {
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: clamp(14px,1.5vw,20px); 
+    margin-bottom: 25px !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    line-height: 1.1;
+}
+.nick-hero-btn {
+    display: inline-block;
+    background: linear-gradient(180deg,#8E55EB 0%,#581371 100%);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: clamp(.9rem,1vw,1.1rem);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: transform .2s ease;
+}
+.nick-hero-btn:hover{
+    transform:scale(1.05);
+}
+.nick-hero-swiper .swiper-pagination {
+    text-align: right !important;
+    right: 250px !important;
+    bottom: 30px !important;
+    width: auto !important;
+    z-index: 100 !important;
+}
+.nick-hero-swiper .swiper-pagination-bullet {
+    width: 7px !important;
+    height: 7px !important;
+    background: #fff !important;
+    opacity: .4 !important;
+    margin: 0 6px !important;
+}
+.nick-hero-swiper .swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    transform: scale(1.2);
+}
+</style>
